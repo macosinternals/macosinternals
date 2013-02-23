@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section class="content">
+{% for post in site.posts %}
+    <hr>
+    <a href="{{ post.url }}">
+        <img align="left" src="{{post.icon}}" />
+        <h3>&nbsp;{{ post.title }}</h3>
+    </a>
+    {{ post.content | excerpt }}
+{% endfor %}
+
+</section>
